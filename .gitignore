@@ -1,10 +1,24 @@
+# Environnement virtuel
 .venv/
+
+# Python
 __pycache__/
 *.pyc
+
+# Jupyter
 .ipynb_checkpoints/
 
-data/raw/
-data/processed/
+# Modèles et sorties
+models/*
+!models/.gitkeep
 
-models/
-reports/
+reports/*
+!reports/.gitkeep
+
+# Data
+data/processed/*
+!data/processed/.gitkeep
+
+# Fichiers système / éditeur
+.DS_Store
+Thumbs.db
