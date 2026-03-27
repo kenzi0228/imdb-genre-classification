@@ -71,32 +71,21 @@ These issues motivated a full cleaning and normalization pipeline.
 6. Evaluation (accuracy, precision, recall, F1-score)
 
 ##  Project Structure
+```t
 imdb-genre-naive-bayes/
-
 ├── data/
-
 │   ├── raw/
-
 │   │   └── movies.csv
-
 │   └── processed/
-
 ├── notebooks/
-
 │   ├── 01_preparation_donnees.ipynb
-
 │   └── 02_entrainement_modeles.ipynb
-
 ├── models/
-
 ├── reports/
-
 ├── .gitignore
-
 ├── requirements.txt
-
 └── README.md
-
+```
 
 ## Workflow
 ### Notebook 1 — Data preparation
