@@ -8,17 +8,23 @@ __pycache__/
 # Jupyter
 .ipynb_checkpoints/
 
-# Modèles et sorties
+# MODELS
 models/*
 !models/.gitkeep
 
+# REPORTS
 reports/*
 !reports/.gitkeep
 
-# Data
+# DATA
+## RAW 
+data/raw/*
+!data/raw/.gitkeep
+
+## PROCESSED 
 data/processed/*
 !data/processed/.gitkeep
 
-# Fichiers système / éditeur
+# SYSTÈME
 .DS_Store
 Thumbs.db
