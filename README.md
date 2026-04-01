@@ -250,5 +250,3 @@ After running the notebooks, the project should produce:
 
 ## 👤 Author
 Kenzi Mohamed Lali
-
-Mohamed Mehdi Kharrat
