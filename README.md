@@ -71,17 +71,21 @@ These issues motivated a full cleaning and normalization pipeline.
 6. Evaluation (accuracy, precision, recall, F1-score)
 
 ##  Project Structure
-```t
+```
 imdb-genre-naive-bayes/
+│
 ├── data/
-│   ├── raw/
+│   ├── raw/               
 │   │   └── movies.csv
-│   └── processed/
+│   └── processed/         
+│
 ├── notebooks/
-│   ├── 01_preparation_donnees.ipynb
-│   └── 02_entrainement_modeles.ipynb
-├── models/
-├── reports/
+│   ├── 01_preparation_donnees.ipynb   
+│   └── 02_entrainement_modeles.ipynb 
+│
+├── models/                 
+├── reports/                
+│
 ├── .gitignore
 ├── requirements.txt
 └── README.md
@@ -166,6 +170,32 @@ The goal is not only to report accuracy, but also to compare:
 - class-specific strengths and weaknesses
 - confusion patterns between genres
 
+## Interactive movie genre prediction
+
+A final interactive section was added to the second notebook.
+
+This feature allows the user to:
+- search for a movie by typing its name;
+- browse matching titles from the dataset;
+- select a single movie;
+- compare the predictions of the three trained models with the real genre.
+
+### What is displayed
+For a selected movie, the notebook shows:
+- the movie title;
+- the release year;
+- the real genre;
+- the prediction from **Gaussian Naive Bayes**;
+- the prediction from **Random Forest**;
+- the prediction from **HistGradientBoostingClassifier**.
+
+### Technical implementation
+This feature was implemented using `ipywidgets` in the notebook environment, with:
+- a dynamic search box;
+- a filtered selection widget;
+- a prediction display section for the selected movie.
+
+
 ## Evaluation metrics
 
 Because this is a multiclass classification problem, several metrics are used:
@@ -187,17 +217,6 @@ Several decisions were made to improve the rigor of the project:
 - transformations were justified from a statistical point of view
 - model comparison was used to move beyond a single baseline
 
-## Main limitations
-
-This project has several limitations that should be acknowledged:
-
-- genre is reduced to a single main label, while movies may belong to multiple genres
-- only structured numerical and encoded variables are used
-- textual information such as plot summaries is not exploited
-- gross_income contains many zero values, which limits its - predictive power
-- even with proper preprocessing, predicting genre from tabular metadata remains a difficult task
-
-As a result, the project should be interpreted as a rigorous structured-data classification study rather than a complete genre understanding system.
 
 ## Installation
 
